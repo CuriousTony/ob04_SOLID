@@ -36,8 +36,7 @@ class Fighter:
 
     def attack(self, target):
         print(f"{self.name.title()} атакует!")
-        damage_done = self.weapon.attack()
-        target.get_damage(damage_done)
+        target.get_damage(self.weapon.attack())
 
     def change_weapon(self, new_weapon):
         print(f"{self.name.title()} сменил оружие!")
